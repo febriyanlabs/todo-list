@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", system-ui;
+  width: 100%;
+  display: flex;
+  object-fit: center;
+  align-items: center;
+  justify-content: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("background.jpeg");
+  background-size: cover;
+  transform: scale(1.05);
+  filter: blur(2px) ;
+  z-index: -1;
+}
+
+.card {
+  width: 80%;
+  max-width: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  color: #f1f5f9;
+}
+
+.card h1 {
+  font-weight: 800;
+}
+
+.card h3 {
+  font-weight: 400;
+}
+
+.input-add {
+  display: flex;
+  margin: 1rem 0;
+  width: 100%;
+  justify-content: space-between;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+
+}
+
+#input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px 10px;
+  background-color: transparent;
+  color: #f1f5f9;
+  font: inherit;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: none;
+}
+
+#input::placeholder {
+  color: rgba(241, 245, 249, 0.6);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#add-task {
+  padding: 10px;
+  border: none;
+  border-left: 2px solid rgba(255, 255, 255, 0.3)!important;
+  outline: none;
+  font: inherit;
+  font-size: 0.9rem;
+  color: #f1f5f9;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
