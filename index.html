@@ -9,18 +9,47 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
-    <title>todo-list</title>
-
     <link rel="stylesheet" href="style.css" />
+    <title>todo-list</title>
   </head>
   <body>
     <div class="card">
       <h1>Heyy, Ruu!</h1>
       <h3>Lets be productive, today!</h3>
+
+      <!--input task-->
       <section class="input-add">
-        <input type="text" id="input" placeholder="Enter a new task" />
+        <input
+          type="text"
+          autofocus="true"
+          id="input"
+          placeholder="Enter a new task"
+        />
         <button id="add-task" type="submit">Add</button>
       </section>
+      <!--input task-->
+
+      <section class="bottom">
+        <!-- filter -->
+        <div class="filter">
+          <button id="All" act>All</button>
+          <button id="Pending">Pending</button>
+          <button id="Finished">Finished</button>
+        </div>
+        <!-- filter -->
+
+        <!-- task list -->
+        <div class="task-container">
+          <ul class="" id="task-list"></ul>
+          <div class="empty">
+            <img src="img.png" alt="" id="empty-img" class="empty">
+            <h2 class="empty">You have no task today :)</h2>
+          </div>
+        </div>
+        <!-- task list -->
+      </section>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
