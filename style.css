@@ -35,8 +35,8 @@ body::before {
 }
 
 .card {
-  width: 80%;
-  max-width: 500px;
+  width: 60%;
+  max-width: 400px;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -45,6 +45,7 @@ body::before {
   background-color: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(20px);
   color: var(--text-color);
+  box-shadow: 0 0 40px rgba(31, 32, 33, 0.55);
 }
 
 .card h1 {
@@ -96,7 +97,7 @@ body::before {
 }
 
 #add-task:hover {
-  background-color: var(--filter-hover);
+  background-color: rgba(9, 9, 9, 0.3);
 }
 
 .bottom {
@@ -123,12 +124,7 @@ body::before {
 
 .filter button:hover,
 .filter button:active {
-  background-color: var(--filter-hover);
-}
-
-
-#task-list {
-  width: 100%;
+  background-color: rgba(9, 9, 9, 0.4);
 }
 
 .task-container {
@@ -138,27 +134,40 @@ body::before {
   align-items: center;
   color: var(--text-color);
   font-weight: 500;
-  padding: 50px;
+  padding: 20px 0;
+}
+
+#task-list {
+  width: 100%;
 }
 
 .task-container h2 {
+  font-size: 1.4rem;
   font-weight: 750;
   font-style: italic;
+  text-align: center;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #empty-img {
   filter: opacity(0.7);
+  margin: 0 auto;
   width: auto;
-  height: 200px;
+  height: 180px;
   object-fit: contain;
 }
 
-
-
 #task-list li {
   display: flex;
+  width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   transition: box shadow 0.2 ease;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.22);
@@ -166,6 +175,7 @@ body::before {
   font-weight: 600;
   color: var(--text-color);
   margin-bottom: 10px;
+  padding-left: 10px;
 }
 
 #task-list li:hover {
@@ -178,9 +188,9 @@ body::before {
   height: 20px;
   background-color: transparent;
   appearance: none;
-  border: 2px solid var(--clear-text-color);
-  margin-right: 5px;
-  transition: all 0.2s ease;
+  border: 1.5px solid var(--clear-text-color);
+  margin-right: 10px;
+  transition: all 0.1s ease;
   cursor: pointer;
 }
 
@@ -190,10 +200,34 @@ body::before {
 }
 
 #task-list li .checkbox:checked::before {
-  content: '\2713';
+  content: "\2714";
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+}
+
+.task-button {
+  display: flex;
+}
+
+.task-button button {
+  background: rgba(9, 9, 9, 0.45);
+  border-radius: 50%;
+  min-width: 27px;
+  height: 27px;
+  color: var(--clear-text-color);
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.task-button button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }

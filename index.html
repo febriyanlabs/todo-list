@@ -9,6 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>todo-list</title>
   </head>
@@ -18,15 +25,16 @@
       <h3>Lets be productive, today!</h3>
 
       <!--input task-->
-      <section class="input-add">
+      <form action="" class="input-add">
         <input
           type="text"
           autofocus="true"
           id="input"
+          autocomplete="off"
           placeholder="Enter a new task"
         />
         <button id="add-task" type="submit">Add</button>
-      </section>
+      </form>
       <!--input task-->
 
       <section class="bottom">
@@ -42,7 +50,7 @@
         <div class="task-container">
           <ul class="" id="task-list"></ul>
           <div class="empty">
-            <img src="img.png" alt="" id="empty-img" class="empty">
+            <img src="img.png" alt="" id="empty-img" class="empty" />
             <h2 class="empty">You have no task today :)</h2>
           </div>
         </div>
